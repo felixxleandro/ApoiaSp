@@ -16,11 +16,10 @@ export const Sobre = (): JSX.Element => {
       <div className="bg-[#fcfdeb] overflow-hidden w-full max-w-[1440px] relative">
         <header className="relative w-full h-[804px]">
           <div className="w-full h-full bg-[url(/foto-painel.png)] bg-cover bg-[50%_50%]">
-            <div className="h-full bg-[#322030f2]" />
+            <div className="h-full bg-[#322030f2]">
+              <Navbar />
+            </div>
           </div>
-
-          <Navbar />
-
           <TitleSection />
         </header>
 
