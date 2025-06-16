@@ -16,11 +16,10 @@ export const Sobre = (): JSX.Element => {
       <div className="bg-[#fcfdeb] overflow-hidden w-full max-w-[1440px] relative">
         <header className="relative w-full h-[804px]">
           <div className="w-full h-full bg-[url(/foto-painel.png)] bg-cover bg-[50%_50%]">
-            <div className="h-full bg-[#322030f2]" />
+            <div className="h-full bg-[#322030f2]">
+              <Navbar />
+            </div>
           </div>
-
-          <Navbar />
-
           <TitleSection />
         </header>
 
@@ -47,7 +46,7 @@ export const Sobre = (): JSX.Element => {
         <footer className="w-full mt-8">
           <Separator className="w-full h-px" />
 
-          <div className="flex items-center justify-between px-32 py-8">
+          <div className="flex flex-col items-center gap-6 px-4 py-8 md:flex-row md:justify-between md:items-center md:px-32">
             <div className="flex items-center">
               <img className="w-[42px] h-[43px]" alt="Logo" src="/logo.png" />
               <div className="ml-2 font-['Poppins',Helvetica] font-bold text-[#322030] text-base">
@@ -59,7 +58,7 @@ export const Sobre = (): JSX.Element => {
               © 2025 - Todos os direitos reservados a ApoiaSP.
             </div>
 
-            <div className="flex space-x-4">
+            <div className="flex gap-4">
               <img
                 className="w-[15px] h-[15px]"
                 alt="Logo tiktok"

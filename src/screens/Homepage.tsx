@@ -239,7 +239,7 @@ export const Homepage = (): JSX.Element => {
         <footer className="mt-[100px]">
           <Separator className="w-full h-px bg-[#322030]" />
 
-          <div className="flex justify-between items-center px-[120px] py-[33px]">
+          <div className="flex flex-col items-center gap-6 px-4 py-[33px] md:flex-row md:justify-between md:items-center md:px-[120px]">
             <div className="flex items-center">
               <img className="w-[41px] h-[41px]" alt="Logo" src="/logo.png" />
               <span className="ml-[11px] font-['Poppins',Helvetica] font-bold text-[#322030] text-base">
