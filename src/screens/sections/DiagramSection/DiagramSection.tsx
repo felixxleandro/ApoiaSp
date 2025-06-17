@@ -16,29 +16,29 @@ export const DiagramSection = (): JSX.Element => {
   };
 
   return (
-    <section className="w-full max-w-[1200px] mx-auto py-8">
-      <div className="flex flex-col md:flex-row gap-6">
+    <section className="w-full max-w-[1200px] mx-auto py-6 md:py-8 px-4 md:px-8">
+      <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {/* Profile image card */}
-        <Card className="w-full md:w-[300px] h-[300px] bg-[#3220309c] rounded-[20px] shrink-0">
+        <Card className="w-full lg:w-[300px] h-64 md:h-80 lg:h-[300px] bg-[#3220309c] rounded-[20px] shrink-0 mx-auto lg:mx-0">
           <CardContent className="p-0 h-full"></CardContent>
         </Card>
 
         {/* Profile information */}
-        <div className="flex flex-col">
-          <h2 className="font-bold text-[27px] text-[#322030] font-['Poppins',Helvetica] mb-6">
+        <div className="flex flex-col flex-1">
+          <h2 className="font-bold text-xl md:text-2xl lg:text-[27px] text-[#322030] font-['Poppins',Helvetica] mb-4 md:mb-6 text-center lg:text-left">
             {teamMember.name}
           </h2>
 
-          <p className="text-[17px] text-[#322030] font-['Poppins',Helvetica] font-normal whitespace-pre-line mb-6">
+          <p className="text-sm md:text-base lg:text-[17px] text-[#322030] font-['Poppins',Helvetica] font-normal whitespace-pre-line mb-6 md:mb-8 text-center lg:text-left">
             {teamMember.description}
           </p>
 
           {/* Social icons */}
-          <div className="flex gap-5 mt-auto">
+          <div className="flex gap-4 md:gap-5 justify-center lg:justify-start">
             {teamMember.socialIcons.map((icon, index) => (
               <img
                 key={index}
-                className="w-20 h-20"
+                className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
                 alt={icon.alt}
                 src={icon.src}
               />

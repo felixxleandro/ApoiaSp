@@ -110,7 +110,7 @@ export const Chatbot = (): JSX.Element => {
     <div className="bg-[#fcfdeb] flex flex-row justify-center w-full min-h-screen">
       <div className="bg-[#fcfdeb] overflow-hidden w-full max-w-[1440px] relative">
         {/* Hero Section */}
-        <header className="relative w-full h-[300px]">
+        <header className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]">
           <div className="absolute w-full h-full top-0 left-0 bg-[url(/foto-painel.png)] bg-cover bg-[50%_50%]">
             <div className="h-full bg-[#322030f2]" />
           </div>
@@ -118,61 +118,61 @@ export const Chatbot = (): JSX.Element => {
           <Navbar />
 
           {/* Hero Content */}
-          <div className="absolute w-full max-w-[1204px] top-[150px] left-1/2 transform -translate-x-1/2 text-center z-10">
-            <h1 className="font-['Nunito',Helvetica] font-black text-[48px] tracking-[0] leading-normal">
+          <div className="absolute w-full px-4 top-[120px] sm:top-[140px] md:top-[160px] lg:top-[180px] left-1/2 transform -translate-x-1/2 text-center z-10">
+            <h1 className="font-['Nunito',Helvetica] font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] tracking-[0] leading-normal">
               <span className="text-[#fcfdeb]">ASSISTENTE </span>
               <span className="text-[#c1a2a0]">VIRTUAL</span>
             </h1>
-            <p className="mt-4 font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-[18px]">
+            <p className="mt-2 sm:mt-3 md:mt-4 font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-sm sm:text-base md:text-lg lg:text-xl">
               Tire suas dúvidas sobre benefícios e direitos sociais
             </p>
           </div>
         </header>
 
         {/* Chat Container */}
-        <main className="px-[120px] py-[50px]">
-          <Card className="w-full max-w-[1000px] mx-auto h-[600px] bg-white rounded-[30px] border-none shadow-lg overflow-hidden">
+        <main className="px-4 sm:px-6 md:px-8 lg:px-[120px] py-6 sm:py-8 md:py-[50px]">
+          <Card className="w-full max-w-[1000px] mx-auto h-[500px] sm:h-[550px] md:h-[600px] lg:h-[650px] bg-white rounded-[20px] sm:rounded-[25px] md:rounded-[30px] border-none shadow-lg overflow-hidden">
             <CardContent className="p-0 h-full flex flex-col">
               {/* Chat Header */}
-              <div className="bg-[#322030] p-6 flex items-center">
-                <div className="w-12 h-12 bg-[#c1a2a0] rounded-full flex items-center justify-center mr-4">
-                  <Bot className="w-6 h-6 text-[#322030]" />
+              <div className="bg-[#322030] p-3 sm:p-4 md:p-6 flex items-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-[#c1a2a0] rounded-full flex items-center justify-center mr-2 sm:mr-3 md:mr-4">
+                  <Bot className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#322030]" />
                 </div>
                 <div>
-                  <h3 className="font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-[18px]">
+                  <h3 className="font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-sm sm:text-base md:text-lg">
                     Assistente ApoiaSP
                   </h3>
-                  <p className="font-['Poppins',Helvetica] text-[#fcfdeb] text-[14px] opacity-80">
+                  <p className="font-['Poppins',Helvetica] text-[#fcfdeb] text-xs sm:text-sm opacity-80">
                     Online - Pronto para ajudar
                   </p>
                 </div>
               </div>
 
               {/* Messages Area */}
-              <div className="flex-1 overflow-y-auto p-6 space-y-4">
+              <div className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6 space-y-3 sm:space-y-4">
                 {messages.map((message) => (
                   <div
                     key={message.id}
                     className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}
                   >
                     <div
-                      className={`max-w-[70%] p-4 rounded-[20px] ${
+                      className={`max-w-[85%] sm:max-w-[80%] md:max-w-[70%] p-3 sm:p-4 rounded-[15px] sm:rounded-[18px] md:rounded-[20px] ${
                         message.isUser
-                          ? "bg-[#322030] text-[#fcfdeb] ml-4"
-                          : "bg-[#e3cebd] text-[#322030] mr-4"
+                          ? "bg-[#322030] text-[#fcfdeb] ml-2 sm:ml-4"
+                          : "bg-[#e3cebd] text-[#322030] mr-2 sm:mr-4"
                       }`}
                     >
-                      <div className="flex items-start space-x-3">
+                      <div className="flex items-start space-x-2 sm:space-x-3">
                         {!message.isUser && (
-                          <div className="w-8 h-8 bg-[#322030] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                            <Bot className="w-4 h-4 text-[#fcfdeb]" />
+                          <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-[#322030] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <Bot className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-[#fcfdeb]" />
                           </div>
                         )}
                         <div className="flex-1">
-                          <p className="font-['Poppins',Helvetica] text-[15px] leading-relaxed">
+                          <p className="font-['Poppins',Helvetica] text-xs sm:text-sm md:text-[15px] leading-relaxed">
                             {message.text}
                           </p>
-                          <span className="text-[12px] opacity-70 mt-2 block">
+                          <span className="text-[10px] sm:text-[11px] md:text-[12px] opacity-70 mt-1 sm:mt-2 block">
                             {message.timestamp.toLocaleTimeString("pt-BR", {
                               hour: "2-digit",
                               minute: "2-digit",
@@ -180,8 +180,8 @@ export const Chatbot = (): JSX.Element => {
                           </span>
                         </div>
                         {message.isUser && (
-                          <div className="w-8 h-8 bg-[#c1a2a0] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                            <User className="w-4 h-4 text-[#322030]" />
+                          <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-[#c1a2a0] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <User className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-[#322030]" />
                           </div>
                         )}
                       </div>
@@ -191,15 +191,15 @@ export const Chatbot = (): JSX.Element => {
 
                 {isTyping && (
                   <div className="flex justify-start">
-                    <div className="max-w-[70%] p-4 rounded-[20px] bg-[#e3cebd] text-[#322030] mr-4">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-[#322030] rounded-full flex items-center justify-center">
-                          <Bot className="w-4 h-4 text-[#fcfdeb]" />
+                    <div className="max-w-[85%] sm:max-w-[80%] md:max-w-[70%] p-3 sm:p-4 rounded-[15px] sm:rounded-[18px] md:rounded-[20px] bg-[#e3cebd] text-[#322030] mr-2 sm:mr-4">
+                      <div className="flex items-center space-x-2 sm:space-x-3">
+                        <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-[#322030] rounded-full flex items-center justify-center">
+                          <Bot className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-[#fcfdeb]" />
                         </div>
                         <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-[#322030] rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-[#322030] rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
-                          <div className="w-2 h-2 bg-[#322030] rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#322030] rounded-full animate-bounce"></div>
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#322030] rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#322030] rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
                         </div>
                       </div>
                     </div>
@@ -210,25 +210,25 @@ export const Chatbot = (): JSX.Element => {
               </div>
 
               {/* Input Area */}
-              <div className="border-t border-[#e3cebd] p-6">
-                <div className="flex space-x-4">
+              <div className="border-t border-[#e3cebd] p-3 sm:p-4 md:p-6">
+                <div className="flex space-x-2 sm:space-x-3 md:space-x-4">
                   <Input
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Digite sua pergunta sobre benefícios, documentos, programas sociais..."
-                    className="flex-1 h-12 px-4 rounded-[25px] border-2 border-[#e3cebd] focus:border-[#322030] font-['Poppins',Helvetica] text-[15px]"
+                    placeholder="Digite sua pergunta sobre benefícios..."
+                    className="flex-1 h-10 sm:h-11 md:h-12 px-3 sm:px-4 rounded-[20px] sm:rounded-[22px] md:rounded-[25px] border-2 border-[#e3cebd] focus:border-[#322030] font-['Poppins',Helvetica] text-xs sm:text-sm md:text-[15px]"
                     disabled={isTyping}
                   />
                   <Button
                     onClick={handleSendMessage}
                     disabled={!inputMessage.trim() || isTyping}
-                    className="h-12 w-12 rounded-full bg-[#322030] hover:bg-[#725b75] text-[#fcfdeb] flex items-center justify-center"
+                    className="h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 rounded-full bg-[#322030] hover:bg-[#725b75] text-[#fcfdeb] flex items-center justify-center"
                   >
-                    <Send className="w-5 h-5" />
+                    <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                   </Button>
                 </div>
-                <p className="text-[12px] text-[#322030] opacity-60 mt-2 text-center font-['Poppins',Helvetica]">
+                <p className="text-[10px] sm:text-[11px] md:text-[12px] text-[#322030] opacity-60 mt-1 sm:mt-2 text-center font-['Poppins',Helvetica]">
                   Pressione Enter para enviar • Este assistente fornece orientações gerais
                 </p>
               </div>
@@ -236,11 +236,11 @@ export const Chatbot = (): JSX.Element => {
           </Card>
 
           {/* Quick Actions */}
-          <div className="max-w-[1000px] mx-auto mt-8">
-            <h3 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-[20px] mb-4 text-center">
+          <div className="max-w-[1000px] mx-auto mt-6 sm:mt-8">
+            <h3 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-base sm:text-lg md:text-xl mb-3 sm:mb-4 text-center">
               Perguntas frequentes
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {[
                 "Como fazer o Cadastro Único?",
                 "Quais documentos preciso para o Auxílio Brasil?",
@@ -253,7 +253,7 @@ export const Chatbot = (): JSX.Element => {
                   key={index}
                   variant="outline"
                   onClick={() => setInputMessage(question)}
-                  className="h-auto p-4 rounded-[20px] border-[#322030] text-[#322030] hover:bg-[#322030] hover:text-[#fcfdeb] font-['Poppins',Helvetica] text-[14px] text-left justify-start whitespace-normal"
+                  className="h-auto p-3 sm:p-4 rounded-[15px] sm:rounded-[18px] md:rounded-[20px] border-[#322030] text-[#322030] hover:bg-[#322030] hover:text-[#fcfdeb] font-['Poppins',Helvetica] text-xs sm:text-sm md:text-[14px] text-left justify-start whitespace-normal"
                 >
                   {question}
                 </Button>
@@ -263,24 +263,24 @@ export const Chatbot = (): JSX.Element => {
         </main>
 
         {/* Footer */}
-        <footer className="mt-[50px] pt-9 border-t border-[#322030]">
-          <div className="px-[120px] flex justify-between items-center pb-8">
+        <footer className="mt-8 sm:mt-12 md:mt-[50px] pt-6 sm:pt-8 md:pt-9 border-t border-[#322030]">
+          <div className="px-4 sm:px-6 md:px-8 lg:px-[120px] flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 pb-6 sm:pb-8">
             <div className="flex items-center">
-              <img className="w-12 h-[49px]" alt="Logo" src="/logo.png" />
-              <div className="ml-3 font-['Poppins',Helvetica] font-bold text-[#322030] text-base">
+              <img className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-[49px]" alt="Logo" src="/logo.png" />
+              <div className="ml-2 sm:ml-3 font-['Poppins',Helvetica] font-bold text-[#322030] text-sm sm:text-base">
                 ApoiaSp
               </div>
             </div>
 
-            <div className="font-['Inter',Helvetica] font-medium text-[#322030] text-base text-center">
+            <div className="font-['Inter',Helvetica] font-medium text-[#322030] text-xs sm:text-sm md:text-base text-center">
               © 2025 - Todos os direitos reservados a ApoiaSP.
             </div>
 
-            <div className="flex gap-[12px]">
-              <img className="w-5 h-5" alt="Logo tiktok" src="/logo-tiktok.svg" />
-              <img className="w-5 h-5" alt="Logo facebook" src="/logo-facebook.svg" />
-              <img className="w-5 h-5" alt="Logo linkedin" src="/logo-linkedin.svg" />
-              <img className="w-5 h-5" alt="Logo instagram" src="/logo-instagram.svg" />
+            <div className="flex gap-3 sm:gap-4 md:gap-[12px]">
+              <img className="w-4 h-4 sm:w-5 sm:h-5" alt="Logo tiktok" src="/logo-tiktok.svg" />
+              <img className="w-4 h-4 sm:w-5 sm:h-5" alt="Logo facebook" src="/logo-facebook.svg" />
+              <img className="w-4 h-4 sm:w-5 sm:h-5" alt="Logo linkedin" src="/logo-linkedin.svg" />
+              <img className="w-4 h-4 sm:w-5 sm:h-5" alt="Logo instagram" src="/logo-instagram.svg" />
             </div>
           </div>
         </footer>

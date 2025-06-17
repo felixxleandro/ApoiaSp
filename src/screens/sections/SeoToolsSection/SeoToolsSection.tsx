@@ -38,14 +38,14 @@ export const SeoToolsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full relative py-12">
+    <section className="w-full relative py-8 md:py-12">
       {/* Header section with purple background */}
-      <div className="w-full bg-[#322030] py-10">
-        <div className="container max-w-[1204px] mx-auto px-4">
-          <h2 className="font-bold font-['Poppins',Helvetica] text-[#fcfdeb] text-[27px] mb-6">
+      <div className="w-full bg-[#322030] py-8 md:py-10">
+        <div className="container max-w-[1204px] mx-auto px-4 md:px-8">
+          <h2 className="font-bold font-['Poppins',Helvetica] text-[#fcfdeb] text-xl md:text-2xl lg:text-[27px] mb-4 md:mb-6">
             Um pouco mais sobre nossas escolhas
           </h2>
-          <p className="font-normal font-['Poppins',Helvetica] text-[#fcfdeb] text-[17px]">
+          <p className="font-normal font-['Poppins',Helvetica] text-[#fcfdeb] text-sm md:text-base lg:text-[17px]">
             O objetivo principal desse projeto foi solucionar um problema real
             utilizando dois recursos principais: Utilizar recursos da AWS onde
             houvesse a possibilidade e utilizar AI (inteligência artificial)
@@ -55,25 +55,25 @@ export const SeoToolsSection = (): JSX.Element => {
       </div>
 
       {/* Content sections */}
-      <div className="container max-w-[1204px] mx-auto px-4 mt-16">
+      <div className="container max-w-[1204px] mx-auto px-4 md:px-8 mt-12 md:mt-16">
         {technologies.map((tech, index) => (
           <React.Fragment key={tech.title}>
-            <Card className="border-none shadow-none mb-16">
+            <Card className="border-none shadow-none mb-12 md:mb-16">
               <CardContent className="p-0">
                 <div
-                  className={`flex flex-col ${tech.isRightAligned ? "items-end text-right" : "items-start text-left"}`}
+                  className={`flex flex-col ${tech.isRightAligned ? "md:items-end md:text-right" : "md:items-start md:text-left"} text-center md:text-left`}
                 >
-                  <h3 className="font-bold font-['Poppins',Helvetica] text-[#322030] text-[27px] mb-6">
+                  <h3 className="font-bold font-['Poppins',Helvetica] text-[#322030] text-xl md:text-2xl lg:text-[27px] mb-4 md:mb-6">
                     {tech.title}
                   </h3>
-                  <p className="font-normal font-['Poppins',Helvetica] text-[#322030] text-[17px]">
+                  <p className="font-normal font-['Poppins',Helvetica] text-[#322030] text-sm md:text-base lg:text-[17px]">
                     {tech.description}
                   </p>
                 </div>
               </CardContent>
             </Card>
             {index < technologies.length - 1 && (
-              <Separator className="my-8 bg-[#322030]/10" />
+              <Separator className="my-6 md:my-8 bg-[#322030]/10" />
             )}
           </React.Fragment>
         ))}

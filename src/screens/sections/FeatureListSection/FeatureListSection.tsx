@@ -11,44 +11,37 @@ export const FeatureListSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full max-w-[1200px] mx-auto py-8">
-      <div className="flex flex-col md:flex-row gap-8">
+    <section className="w-full max-w-[1200px] mx-auto py-6 md:py-8 px-4 md:px-8">
+      <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {/* Profile Image Placeholder */}
-        <div
-          className="w-full md:w-[300px] h-[300px] bg-[#3220309c] 
-             rounded-[20px] overflow-hidden"
-        >
-          <div
-            className="w-full h-full bg-[url('./alex.jpeg')] 
-               bg-cover bg-center 
-               transition-transform duration-500 ease-in-out hover:scale-110"
-          />
+        <div className="w-full lg:w-[300px] h-64 md:h-80 lg:h-[300px] bg-[#3220309c] rounded-[20px] overflow-hidden mx-auto lg:mx-0">
+          <div className="w-full h-full bg-[url('./alex.jpeg')] bg-cover bg-center transition-transform duration-500 ease-in-out hover:scale-110" />
         </div>
 
         {/* Profile Information */}
         <div className="flex-1 max-w-[853px]">
           <Card className="border-0 shadow-none">
             <CardContent className="p-0">
-              <h2 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-[27px] mb-6">
+              <h2 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-xl md:text-2xl lg:text-[27px] mb-4 md:mb-6 text-center lg:text-left">
                 Taina de Oliveira (Alex)
               </h2>
 
-              <p className="font-['Poppins',Helvetica] font-normal text-[#322030] text-[17px] mb-8">
+              <p className="font-['Poppins',Helvetica] font-normal text-[#322030] text-sm md:text-base lg:text-[17px] mb-6 md:mb-8 text-center lg:text-left">
                 Responsável pela criação de todo o design do site, bem como
                 organização da metodologia ágil utilizada ao longo do projeto.
                 <br />
                 <br />
-                Atualmente (2025), trabalha na ONG &quot;Escrevendo na
-                Quebrada&quot; e tem aprofundado seus conhecimentos em nuvem,
+                Atualmente (2025), trabalha na ONG "Escrevendo na
+                Quebrada" e tem aprofundado seus conhecimentos em nuvem,
                 AWS e backend.
               </p>
 
               {/* Social Media Icons */}
-              <div className="flex gap-5 mt-4">
+              <div className="flex gap-4 md:gap-5 justify-center lg:justify-start">
                 {socialLinks.map((link) => (
                   <img
                     key={link.id}
-                    className="w-20 h-20"
+                    className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
                     alt={link.alt}
                     src={link.src}
                   />
