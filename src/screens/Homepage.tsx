@@ -52,14 +52,12 @@ export const Homepage = (): JSX.Element => {
     { id: 4, icon: "/logo-instagram.svg", alt: "Logo instagram" },
   ];
 
-  // Navigation items
-
   return (
     <div className="bg-[#fcfdeb] flex flex-row justify-center w-full">
       <div className="bg-[#fcfdeb] overflow-hidden w-full max-w-[1440px] relative">
         {/* Hero Section */}
-        <header className="relative w-full h-[804px]">
-          <div className="absolute w-full h-[804px] top-0 left-0 bg-[url(/foto-painel.png)] bg-cover bg-[50%_50%]">
+        <header className="relative w-full h-[600px] md:h-[804px]">
+          <div className="absolute w-full h-full top-0 left-0 bg-[url(/foto-painel.png)] bg-cover bg-center">
             <div className="h-full w-full bg-[#322030f2]" />
           </div>
 
@@ -67,12 +65,12 @@ export const Homepage = (): JSX.Element => {
           <Navbar />
 
           {/* Hero Content */}
-          <div className="absolute w-full max-w-[1204px] top-[358px] left-1/2 transform -translate-x-1/2 text-center z-10">
-            <h1 className="font-['Nunito',Helvetica] font-black text-[86px] tracking-[0] leading-normal whitespace-nowrap">
+          <div className="absolute w-full px-4 top-[250px] md:top-[358px] left-1/2 transform -translate-x-1/2 text-center z-10">
+            <h1 className="font-['Nunito',Helvetica] font-black text-4xl md:text-6xl lg:text-[86px] tracking-[0] leading-normal">
               <span className="text-[#fcfdeb]">APOIA</span>
               <span className="text-[#c1a2a0]">SP</span>
             </h1>
-            <p className="mt-8 font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-[25px]">
+            <p className="mt-4 md:mt-8 font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-lg md:text-xl lg:text-[25px] px-4">
               Conectando pessoas aos seus direitos. Informação que transforma,
               acesso que inclui.
             </p>
@@ -80,14 +78,14 @@ export const Homepage = (): JSX.Element => {
         </header>
 
         {/* Main Content */}
-        <main className="px-[120px]">
+        <main className="px-4 md:px-8 lg:px-[120px]">
           {/* Benefits Section */}
-          <section className="mt-[100px]">
-            <div className="mb-[53px]">
-              <h2 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-[27px]">
+          <section className="mt-12 md:mt-[100px]">
+            <div className="mb-8 md:mb-[53px]">
+              <h2 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-xl md:text-2xl lg:text-[27px]">
                 Encontre benefícios e oportunidades perfeitas para você
               </h2>
-              <p className="mt-[53px] font-['Poppins',Helvetica] text-[#322030] text-[17px]">
+              <p className="mt-6 md:mt-[53px] font-['Poppins',Helvetica] text-[#322030] text-sm md:text-base lg:text-[17px]">
                 <span>Responda um </span>
                 <span className="font-bold">questionário direto</span>
                 <span> e descubra quais </span>
@@ -103,13 +101,13 @@ export const Homepage = (): JSX.Element => {
               </p>
             </div>
 
-            <div className="flex mt-[159px]">
+            <div className="flex flex-col lg:flex-row mt-12 md:mt-[159px] gap-8">
               {/* How to use section */}
-              <div className="w-[353px] mr-[55px]">
-                <h3 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-[27px]">
+              <div className="w-full lg:w-[353px] lg:mr-[55px]">
+                <h3 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-xl md:text-2xl lg:text-[27px]">
                   Como usar?
                 </h3>
-                <p className="mt-[59px] font-['Poppins',Helvetica] text-[#322030] text-[17px]">
+                <p className="mt-6 md:mt-[59px] font-['Poppins',Helvetica] text-[#322030] text-sm md:text-base lg:text-[17px]">
                   <span>Responda a um </span>
                   <span className="font-bold">questionário mais longo</span>
                   <span>
@@ -133,59 +131,59 @@ export const Homepage = (): JSX.Element => {
               </div>
 
               {/* Cards Section */}
-              <div className="relative">
-                <div className="absolute w-[863px] h-[520px] bg-[#322030] rounded-[50px]"></div>
+              <div className="relative flex-1">
+                <div className="w-full bg-[#322030] rounded-[30px] md:rounded-[50px] p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row gap-6 md:gap-[34px] mb-6 md:mb-8">
+                    <Card className="flex-1 bg-[#e3cebd] rounded-[30px] md:rounded-[50px] border-none shadow-none">
+                      <CardContent className="flex items-center justify-center h-48 md:h-64 lg:h-[378px] p-4">
+                        <p className="font-['Poppins',Helvetica] text-[#322030] text-sm md:text-base lg:text-[17px] text-center">
+                          Responda algumas perguntas rápidas para que possamos
+                          entender seu perfil e te mostrar os serviços, benefícios
+                          e programas que mais combinam com a sua situação.
+                        </p>
+                      </CardContent>
+                    </Card>
 
-                <div className="flex space-x-[34px] absolute left-[-50px] top-[71px]">
-                  <Card className="w-[378px] h-[378px] bg-[#e3cebd] rounded-[50px] border-none shadow-none">
-                    <CardContent className="flex items-center justify-center h-full">
-                      <p className="w-[296px] font-['Poppins',Helvetica] text-[#322030] text-[17px] text-center">
-                        Responda algumas perguntas rápidas para que possamos
-                        entender seu perfil e te mostrar os serviços, benefícios
-                        e programas que mais combinam com a sua situação.
-                      </p>
-                    </CardContent>
-                  </Card>
+                    <Card className="flex-1 bg-[#e3cebd] rounded-[30px] md:rounded-[50px] border-none shadow-none">
+                      <CardContent className="flex items-center justify-center h-48 md:h-64 lg:h-[378px] p-4">
+                        <p className="font-['Poppins',Helvetica] text-[#322030] text-sm md:text-base lg:text-[17px] text-center">
+                          Converse com nosso assistente virtual! Tire dúvidas,
+                          peça orientações e encontre informações de forma
+                          simples, rápida e acessível, 24h por dia e 7 dias por
+                          semana!
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
 
-                  <Card className="w-[378px] h-[378px] bg-[#e3cebd] rounded-[50px] border-none shadow-none">
-                    <CardContent className="flex items-center justify-center h-full">
-                      <p className="w-[296px] font-['Poppins',Helvetica] text-[#322030] text-[17px] text-center">
-                        Converse com nosso assistente virtual! Tire dúvidas,
-                        peça orientações e encontre informações de forma
-                        simples, rápida e acessível, 24h por dia e 7 dias por
-                        semana!
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                <div className="flex space-x-[122px] absolute left-[-5px] top-[329px]">
-                  <Button
-                    variant="outline"
-                    className="w-[289px] h-16 rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-[13px]"
-                  >
-                    QUERO RESPONDER O QUESTIONÁRIO
-                  </Button>
-                  <Link to="/chatbot">
+                  <div className="flex flex-col md:flex-row gap-4 md:gap-8">
                     <Button
                       variant="outline"
-                      className="w-[289px] h-16 rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-[13px]"
+                      className="w-full md:flex-1 h-12 md:h-16 rounded-[25px] md:rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-xs md:text-[13px] bg-[#fcfdeb] hover:bg-[#e3cebd]"
                     >
-                      QUERO FALAR COM O ASSISTENTE
+                      QUERO RESPONDER O QUESTIONÁRIO
                     </Button>
-                  </Link>
+                    <Link to="/chatbot" className="w-full md:flex-1">
+                      <Button
+                        variant="outline"
+                        className="w-full h-12 md:h-16 rounded-[25px] md:rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-xs md:text-[13px] bg-[#fcfdeb] hover:bg-[#e3cebd]"
+                      >
+                        QUERO FALAR COM O ASSISTENTE
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
           {/* About Section */}
-          <section className="mt-[196px]">
-            <div className="text-right mb-[61px]">
-              <h2 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-[27px]">
+          <section className="mt-16 md:mt-[196px]">
+            <div className="text-center md:text-right mb-8 md:mb-[61px]">
+              <h2 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-xl md:text-2xl lg:text-[27px]">
                 Um pouco mais sobre o ApoiaSP
               </h2>
-              <p className="mt-[60px] font-['Poppins',Helvetica] text-[#322030] text-[17px]">
+              <p className="mt-6 md:mt-[60px] font-['Poppins',Helvetica] text-[#322030] text-sm md:text-base lg:text-[17px]">
                 O ApoiaSP é um projeto de conclusão de curso da Escola da Nuvem,
                 criado para solucionar o desafio de acesso a serviços públicos
                 por pessoas em situação de vulnerabilidade da Zona Leste de São
@@ -205,15 +203,15 @@ export const Homepage = (): JSX.Element => {
             </div>
 
             {/* Technology Cards */}
-            <div className="flex justify-between mb-[20px]">
-              {techCards.map((card, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-6">
+              {techCards.map((card) => (
                 <Card
                   key={card.id}
-                  className="w-56 h-56 bg-[#e3cebd] rounded-[50px] border-none shadow-none opacity-70"
+                  className="aspect-square bg-[#e3cebd] rounded-[30px] md:rounded-[50px] border-none shadow-none opacity-70"
                 >
                   <CardContent className="flex items-center justify-center h-full p-0">
                     <img
-                      className="w-[94px] h-[94px]"
+                      className="w-12 h-12 md:w-16 md:h-16 lg:w-[94px] lg:h-[94px]"
                       alt={card.alt}
                       src={card.icon}
                     />
@@ -223,13 +221,13 @@ export const Homepage = (): JSX.Element => {
             </div>
 
             {/* Technology Descriptions */}
-            <div className="flex justify-between mt-[20px]">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
               {techCards.map((card) => (
-                <div key={card.id} className="w-56 text-center">
-                  <h4 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-[17px]">
+                <div key={card.id} className="text-center">
+                  <h4 className="font-['Poppins',Helvetica] font-bold text-[#322030] text-sm md:text-base lg:text-[17px]">
                     {card.title}
                   </h4>
-                  <p className="mt-[7px] font-['Poppins',Helvetica] text-[#322030] text-[17px]">
+                  <p className="mt-1 md:mt-[7px] font-['Poppins',Helvetica] text-[#322030] text-xs md:text-sm lg:text-[17px]">
                     {card.description}
                   </p>
                 </div>
@@ -239,26 +237,26 @@ export const Homepage = (): JSX.Element => {
         </main>
 
         {/* Footer */}
-        <footer className="mt-[100px]">
+        <footer className="mt-16 md:mt-[100px]">
           <Separator className="w-full h-px bg-[#322030]" />
 
-          <div className="flex justify-between items-center px-[120px] py-[33px]">
+          <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 lg:px-[120px] py-6 md:py-[33px] gap-4">
             <div className="flex items-center">
-              <img className="w-[41px] h-[41px]" alt="Logo" src="/logo.png" />
-              <span className="ml-[11px] font-['Poppins',Helvetica] font-bold text-[#322030] text-base">
+              <img className="w-8 h-8 md:w-[41px] md:h-[41px]" alt="Logo" src="/logo.png" />
+              <span className="ml-2 md:ml-[11px] font-['Poppins',Helvetica] font-bold text-[#322030] text-sm md:text-base">
                 ApoiaSp
               </span>
             </div>
 
-            <p className="font-['Inter',Helvetica] font-medium text-[#322030] text-base text-center">
+            <p className="font-['Inter',Helvetica] font-medium text-[#322030] text-xs md:text-base text-center">
               © 2025 - Todos os direitos reservados a ApoiaSP.
             </p>
 
-            <div className="flex space-x-[24px]">
+            <div className="flex space-x-4 md:space-x-[24px]">
               {socialIcons.map((icon) => (
                 <a key={icon.id} href="#" aria-label={icon.alt}>
                   <img
-                    className="w-[15px] h-[15px]"
+                    className="w-4 h-4 md:w-[15px] md:h-[15px]"
                     alt={icon.alt}
                     src={icon.icon}
                   />
