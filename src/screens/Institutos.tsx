@@ -2,6 +2,7 @@ import { Search } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Input } from "../components/ui/input";
+import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 
 // Define institution data to avoid repetition
@@ -82,9 +83,11 @@ export const Institutos = (): JSX.Element => {
                     <Button className="h-[42px] px-[22px] bg-[#322030] text-[#fcfdeb] rounded-[50px] font-['Poppins',Helvetica] font-bold text-[13px]">
                       ACESSE O SITE
                     </Button>
-                    <Button className="h-[42px] px-[22px] bg-[#725b75] text-[#fcfdeb] rounded-[50px] font-['Poppins',Helvetica] font-bold text-[13px]">
-                      PERGUNTE AO NOSSO ASSISTENTE
-                    </Button>
+                    <Link to="/chatbot">
+                      <Button className="h-[42px] px-[22px] bg-[#725b75] text-[#fcfdeb] rounded-[50px] font-['Poppins',Helvetica] font-bold text-[13px]">
+                        PERGUNTE AO NOSSO ASSISTENTE
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </CardContent>

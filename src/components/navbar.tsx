@@ -4,6 +4,7 @@ const navItems = [
   { id: 1, label: "HOME", href: "/" },
   { id: 2, label: "INSTITUIÇÕES", href: "/institutos" },
   { id: 3, label: "SOBRE", href: "/sobre" },
+  { id: 4, label: "CHATBOT", href: "/chatbot" },
 ];
 function Navbar() {
   return (
@@ -21,7 +22,7 @@ function Navbar() {
             <li key={item.id} className="h-[26px]">
               <Link
                 to={item.href}
-                className="font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-[17px]"
+                className="font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-[17px] hover:text-[#c1a2a0] transition-colors"
               >
                 {item.label}
               </Link>

@@ -1,6 +1,7 @@
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Separator } from "../components/ui/separator";
+import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 
 export const Homepage = (): JSX.Element => {
@@ -165,12 +166,14 @@ export const Homepage = (): JSX.Element => {
                   >
                     QUERO RESPONDER O QUESTIONÁRIO
                   </Button>
-                  <Button
-                    variant="outline"
-                    className="w-[289px] h-16 rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-[13px]"
-                  >
-                    QUERO FALAR COM O ASSISTENTE
-                  </Button>
+                  <Link to="/chatbot">
+                    <Button
+                      variant="outline"
+                      className="w-[289px] h-16 rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-[13px]"
+                    >
+                      QUERO FALAR COM O ASSISTENTE
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
