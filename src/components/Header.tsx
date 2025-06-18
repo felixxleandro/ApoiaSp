@@ -14,8 +14,8 @@ export const Header = ({
   return (
     <header className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px] overflow-hidden">
       {/* Background que ocupa toda a largura da tela */}
-      <div className="fixed inset-0 h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px] bg-[url('/foto-painel.png')] bg-cover bg-center -z-10">
-        <div className="w-full h-full bg-[#322030f2]" />
+      <div className="fixed inset-0 h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px] bg-[#322030] bg-cover bg-center -z-10">
+        <div className="w-full h-full bg-[#322030]" />
       </div>
 
       <Navbar />
