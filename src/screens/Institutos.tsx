@@ -9,10 +9,10 @@ import Navbar from "../components/navbar";
 const institutions = [
   {
     id: 1,
-    name: "Escrevendo na Quebrada",
+    name: "Escola da Nuvem",
     image: "/foto-institui--o-1.png",
     description:
-      "A Escola da Nuvem, fundada em 2020 por empresários e profissionais de tecnologia, é uma organização sem fins lucrativos que oferece cursos online gratuitos na área de tecnologia em nuvem, com o objetivo de construir uma formação técnica de qualidade, de olho na empregabilidade. A iniciativa proporciona oportunidades reais de emprego em um setor com salários acima da média nacional. Centrada na solidariedade e na dignidade, a Escola da Nuvem pavimenta o caminho profissional para um futuro mais próspero e justo àqueles que normalmente se encontram à margem das melhores oportunidades.",
+      "A Escola da Nuvem, fundada em 2020 por empresários e profissionais de tecnologia, é uma organização sem fins lucrativos que oferece cursos online gratuitos na área de tecnologia em nuvem, com o objetivo de construir uma formação técnica de qualidade, de olho na empregabilidade. A iniciativa proporciona oportunidades reais de emprego. Centrada na solidariedade e na dignidade.",
   },
   {
     id: 2,
