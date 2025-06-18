@@ -12,15 +12,15 @@ export const Header = ({
   titleColor = "default",
 }: HeaderProps): JSX.Element => {
   return (
-    <header className="relative min-h-screen w-screen overflow-hidden">
-      {/* Fundo que preenche toda a tela - usando posição fixa para garantir largura total */}
+    <header className="relative min-h-screen w-full overflow-hidden">
+      {/* Fundo que preenche toda a tela */}
       <div 
-        className="fixed inset-0 w-screen h-screen"
+        className="absolute inset-0 w-full h-full"
         style={{ backgroundColor: "#1654DF" }}
       />
       
       {/* Gradiente opcional para dar mais profundidade */}
-      <div className="fixed inset-0 w-screen h-screen bg-gradient-to-br from-blue-600/20 to-blue-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-900/20" />
 
       {/* Navbar */}
       <div className="relative z-20">
@@ -50,7 +50,7 @@ export const Header = ({
       </div>
 
       {/* Elemento decorativo opcional */}
-      <div className="fixed bottom-0 left-0 right-0 w-screen h-24 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
     </header>
   );
 };
