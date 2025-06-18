@@ -12,7 +12,7 @@ const institutions = [
     name: "Escrevendo na Quebrada",
     image: "/foto-institui--o-1.png",
     description:
-      "Escrevendo na Quebrada é uma ONG e cursinho popular (100% gratuito) focado no desenvolvimento da escrita para vestibulares, acolhendo jovens de baixa renda e residentes da perifería que desejam ingressar no ensino superior através de vestibular. a ONG também acolhe adultos e idosos e atua no estado de  São Paulo (presencial) e em outros estados (EaD), oferecendo diversos benefícios além do ensino de qualidade.",
+      "A Escola da Nuvem, fundada em 2020 por empresários e profissionais de tecnologia, é uma organização sem fins lucrativos que oferece cursos online gratuitos na área de tecnologia em nuvem, com o objetivo de construir uma formação técnica de qualidade, de olho na empregabilidade. A iniciativa proporciona oportunidades reais de emprego em um setor com salários acima da média nacional. Centrada na solidariedade e na dignidade, a Escola da Nuvem pavimenta o caminho profissional para um futuro mais próspero e justo àqueles que normalmente se encontram à margem das melhores oportunidades.",
   },
   {
     id: 2,
