@@ -1,1 +1,0 @@
-export { SeoDiagramSection } from "./SeoDiagramSection";
