@@ -8,9 +8,9 @@ interface HeaderProps {
 
 export const Header = ({ title, subtitle, titleColor = "default" }: HeaderProps): JSX.Element => {
   return (
-    <header className="relative w-full h-screen">
+    <header className="relative w-screen h-screen -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12 xl:-mx-16">
       {/* Background que ocupa toda a tela */}
-      <div className="absolute w-full h-full top-0 left-0 bg-[url(/foto-painel.png)] bg-cover bg-center">
+      <div className="absolute w-screen h-full top-0 left-0 bg-[url(/foto-painel.png)] bg-cover bg-center">
         <div className="h-full bg-[#322030f2]" />
       </div>
       
