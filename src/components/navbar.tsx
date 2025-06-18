@@ -6,7 +6,7 @@ const navItems = [
   { id: 1, label: "HOME", href: "/" },
   { id: 2, label: "INSTITUIÇÕES", href: "/institutos" },
   { id: 3, label: "SOBRE", href: "/sobre" },
-  { id: 4, label: "CHATBOT", href: "/chatbot" },
+  { id: 4, label: "ASSISTENTE", href: "/chatbot" },
 ];
 
 function Navbar() {
