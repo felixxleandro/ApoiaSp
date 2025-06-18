@@ -38,7 +38,7 @@ export const Chatbot = (): JSX.Element => {
     const lowerMessage = userMessage.toLowerCase();
     
     if (lowerMessage.includes("auxílio") || lowerMessage.includes("auxilio")) {
-      return "Existem diversos auxílios disponíveis! Os principais são: Auxílio Brasil, Auxílio Gás, Vale Gás, BPC (Benefício de Prestação Continuada) e auxílios emergenciais. Para saber quais você tem direito, preciso conhecer sua situação. Você tem renda familiar? Quantas pessoas moram na sua casa?";
+      return "Na Escola da Nuvem você terá a oportunidade de estudar com instrutores certificados pela AWS, com experiência e em um formato que visa favorecer o seu aprendizado, com o intuito de prepará-lo para dar os primeiros passos na nuvem AWS e no mercado de trabalho, além de direcioná-lo para a certificação digital AWS Certified Cloud Practitioner.";
     }
     
     if (lowerMessage.includes("documentos") || lowerMessage.includes("documento")) {
