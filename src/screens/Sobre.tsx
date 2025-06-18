@@ -21,7 +21,7 @@ export const Sobre = (): JSX.Element => {
     {
       id: 3,
       name: "Gabriel Luis da Costa Alonso",
-      description: "Responsável por desenhar a arquitetura serverless do projeto na nuvem AWS, garantindo a integração segura e escalável entre todos os serviços.\n\nAtualmente (2025), cursa na \"Ciência da Computação\" e tem aprofundado seus conhecimentos em design de sistemas e programação através da criação de soluções na nuvem.",
+      description: "Responsável por desenhar a arquitetura serverless do projeto na nuvem AWS, garantindo a integração segura e escalável entre todos os serviços.\n\nAtualmente (2025), cursando \"Ciência da Computação\" e tem aprofundado seus conhecimentos em design de sistemas e programação através da criação de soluções na nuvem.",
       image: "/gabriel.jpeg"
     },
     {
