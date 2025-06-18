@@ -230,7 +230,7 @@ export const Chatbot = (): JSX.Element => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {[
                 "Como fazer o Cadastro Único?",
-                "Quais documentos preciso para o Auxílio Brasil?",
+                "Como é estudar n escola da nuvem?",
                 "Onde fica o CRAS mais próximo?",
                 "Benefícios para idosos",
                 "Direitos da pessoa com deficiência",
