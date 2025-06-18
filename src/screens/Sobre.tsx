@@ -106,15 +106,6 @@ export const Sobre = (): JSX.Element => {
     },
   ];
 
-  // Diagram components
-  const diagramComponents = [
-    { id: 1, title: "Frontend (Web/Mobile)" },
-    { id: 2, title: "API REST (Backend)" },
-    { id: 3, title: "Banco de Dados" },
-    { id: 4, title: "Módulo de Chatbot" },
-    { id: 5, title: "Painel de Administração" },
-  ];
-
   return (
     <div className="bg-[#fcfdeb] flex flex-row justify-center w-full">
       <div className="bg-[#fcfdeb] overflow-hidden w-full max-w-[1440px] relative">
@@ -243,84 +234,14 @@ export const Sobre = (): JSX.Element => {
               </p>
             </div>
 
-            {/* Diagram */}
-            <Card className="border border-solid border-[#fcfdeb] bg-transparent p-4 md:p-7 relative">
-              <CardContent className="p-0 relative">
-                {/* Mobile Layout - Vertical Stack */}
-                <div className="block md:hidden space-y-6">
-                  {diagramComponents.map((component, index) => (
-                    <div key={component.id}>
-                      <div className="w-full h-14 flex items-center justify-center px-4 py-3 rounded-[25px] border border-solid border-[#fcfdeb]">
-                        <div className="font-['Inter',Helvetica] font-bold text-[#fcfdeb] text-xs text-center">
-                          {component.title}
-                        </div>
-                      </div>
-                      {index < diagramComponents.length - 1 && (
-                        <div className="flex justify-center my-2">
-                          <div className="w-px h-6 bg-[#fcfdeb]"></div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                  
-                  {/* External API for mobile */}
-                  <div className="w-full h-14 flex items-center justify-center px-4 py-3 rounded-[25px] border border-solid border-[#fcfdeb] bg-[#fcfdeb]/10">
-                    <div className="font-['Inter',Helvetica] font-bold text-[#fcfdeb] text-xs text-center">
-                      API de Serviços Externos
-                    </div>
-                  </div>
-                </div>
-
-                {/* Desktop Layout - Original Complex Layout */}
-                <div className="hidden md:block relative h-[400px] lg:h-[543px]">
-                  {/* Left side components */}
-                  <div className="flex flex-col gap-8 lg:gap-12">
-                    {diagramComponents.map((component, index) => (
-                      <div key={component.id} className="w-full max-w-[400px] lg:w-[501px] h-12 lg:h-[57px] relative">
-                        <div className="w-full h-full flex flex-col items-center justify-center gap-2.5 px-4 lg:px-6 py-3 lg:py-[42px] rounded-[25px] lg:rounded-[50px] border border-solid border-[#fcfdeb]">
-                          <div className="relative w-fit font-['Inter',Helvetica] font-bold text-[#fcfdeb] text-xs tracking-[0] leading-[normal]">
-                            {component.title}
-                          </div>
-                        </div>
-
-                        {/* Arrows for desktop only */}
-                        {index < diagramComponents.length - 1 && (
-                          <>
-                            <img
-                              className="absolute w-[15px] h-[46px] top-[57px] left-[45%] hidden lg:block"
-                              alt="Arrow down"
-                              src="/arrow-1.svg"
-                            />
-                            <img
-                              className="absolute w-[15px] h-[46px] top-[58px] left-[55%] hidden lg:block"
-                              alt="Arrow down"
-                              src="/arrow-4.svg"
-                            />
-                          </>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Right side component - Desktop only */}
-                  <div className="absolute top-[180px] lg:top-[243px] right-0 w-full max-w-[400px] lg:w-[531px] h-12 lg:h-[57px]">
-                    <div className="w-full h-full flex flex-col items-center justify-center gap-2.5 px-4 lg:px-6 py-3 lg:py-[42px] rounded-[25px] lg:rounded-[50px] border border-solid border-[#fcfdeb]">
-                      <div className="relative w-fit font-['Inter',Helvetica] font-bold text-[#fcfdeb] text-xs tracking-[0] leading-[normal]">
-                        API de Serviços Externos
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Horizontal arrows connecting to external API - Desktop only */}
+            {/* Diagram Image */}
+            <Card className="border border-solid border-[#fcfdeb] bg-transparent p-4 md:p-6">
+              <CardContent className="p-0">
+                <div className="w-full flex justify-center">
                   <img
-                    className="absolute w-[80px] lg:w-[111px] h-[15px] top-[192px] lg:top-[255px] left-[400px] lg:left-[530px] hidden lg:block"
-                    alt="Arrow right"
-                    src="/arrow-9.svg"
-                  />
-                  <img
-                    className="absolute w-[100px] lg:w-[140px] h-[15px] top-[210px] lg:top-[286px] left-[380px] lg:left-[511px] hidden lg:block"
-                    alt="Arrow left"
-                    src="/arrow-10.svg"
+                    src="/diagrama.png"
+                    alt="Diagrama do projeto ApoiaSP mostrando a arquitetura e conexões entre os sistemas"
+                    className="w-full max-w-4xl h-auto rounded-lg"
                   />
                 </div>
               </CardContent>
