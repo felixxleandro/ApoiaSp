@@ -37,7 +37,7 @@ export const Chatbot = (): JSX.Element => {
   const simulateResponse = (userMessage: string): string => {
     const lowerMessage = userMessage.toLowerCase();
     
-    if (lowerMessage.includes("auxílio") || lowerMessage.includes("auxilio")) {
+    if (lowerMessage.includes("escola da nuvem") || lowerMessage.includes("escola da nuvem")) {
       return "Na Escola da Nuvem você terá a oportunidade de estudar com instrutores certificados pela AWS, com experiência e em um formato que visa favorecer o seu aprendizado, com o intuito de prepará-lo para dar os primeiros passos na nuvem AWS e no mercado de trabalho, além de direcioná-lo para a certificação digital AWS Certified Cloud Practitioner.";
     }
     
@@ -230,7 +230,7 @@ export const Chatbot = (): JSX.Element => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {[
                 "Como fazer o Cadastro Único?",
-                "Como é estudar n escola da nuvem?",
+                "Como é estudar na escola da nuvem?",
                 "Onde fica o CRAS mais próximo?",
                 "Benefícios para idosos",
                 "Direitos da pessoa com deficiência",
