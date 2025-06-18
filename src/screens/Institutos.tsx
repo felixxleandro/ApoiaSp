@@ -81,6 +81,7 @@ export const Institutos = (): JSX.Element => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 md:mt-[30px]">
                     <Button className="h-8 sm:h-9 md:h-10 lg:h-[42px] px-3 sm:px-4 md:px-6 lg:px-[22px] bg-[#322030] text-[#fcfdeb] rounded-[20px] sm:rounded-[25px] md:rounded-[30px] lg:rounded-[50px] font-['Poppins',Helvetica] font-bold text-xs sm:text-sm md:text-base lg:text-[13px]">
+                      <a href="https://escoladanuvem.org/" className="w-full sm:w-auto">
                       ACESSE O SITE
                     </Button>
                     <Link to="/chatbot" className="w-full sm:w-auto">
