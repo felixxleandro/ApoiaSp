@@ -12,31 +12,45 @@ export const Header = ({
   titleColor = "default",
 }: HeaderProps): JSX.Element => {
   return (
-    <header className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px] overflow-hidden">
-      {/* Fundo sólido com cor inline para garantir aplicação */}
-      <div
-        className="fixed inset-0 h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px] -z-10"
+    <header className="relative min-h-screen w-full overflow-hidden">
+      {/* Fundo que preenche toda a tela */}
+      <div 
+        className="absolute inset-0 w-full h-full"
         style={{ backgroundColor: "#1654DF" }}
       />
+      
+      {/* Gradiente opcional para dar mais profundidade */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-900/20" />
 
-      <Navbar />
+      {/* Navbar */}
+      <div className="relative z-20">
+        <Navbar />
+      </div>
 
       {/* Hero Content */}
-      <div className="absolute w-full px-4 top-[200px] sm:top-[250px] md:top-[300px] lg:top-[358px] left-1/2 transform -translate-x-1/2 text-center z-10">
-        <h1 className="font-['Nunito',Helvetica] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[86px] tracking-[0] leading-normal">
-          {titleColor === "mixed" ? (
-            <>
-              <span className="text-[#fcfdeb]">APOIA</span>
-              <span className="text-[#1654DF]">SP</span>
-            </>
-          ) : (
-            <span className="text-[#fcfdeb]">{title}</span>
-          )}
-        </h1>
-        <p className="mt-4 sm:mt-6 md:mt-8 font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[25px] px-4">
-          {subtitle}
-        </p>
+      <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-80px)] px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-4xl mx-auto">
+          {/* Título */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
+            {titleColor === "mixed" ? (
+              <span className="text-white">
+                <span className="text-white">APOIA</span>
+                <span className="text-yellow-400 ml-2">SP</span>
+              </span>
+            ) : (
+              <span className="text-white">{title}</span>
+            )}
+          </h1>
+          
+          {/* Subtítulo */}
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 font-light leading-relaxed max-w-3xl mx-auto">
+            {subtitle}
+          </p>
+        </div>
       </div>
+
+      {/* Elemento decorativo opcional */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
     </header>
   );
 };
