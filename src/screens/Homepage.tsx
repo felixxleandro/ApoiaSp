@@ -166,7 +166,7 @@ export const Homepage = (): JSX.Element => {
                     <Link to="/chatbot" className="w-full sm:flex-1">
                       <Button
                         variant="outline"
-                        className="w-full h-10 sm:h-12 md:h-14 lg:h-16 rounded-[20px] sm:rounded-[30px] md:rounded-[40px] lg:rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-xs sm:text-sm md:text-base lg:text-[13px] bg-[#fcfdeb] hover:bg-[#e3cebd]"
+                        className="w-full h-10 sm:h-12 md:h-14 lg:h-16 rounded-[20px] sm:rounded-[30px] md:rounded-[40px] lg:rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-xs sm:text-sm md:text-base lg:text-[13px] bg-[#e3cebd] hover:bg-[#e3cebd]"
                       >
                         QUERO FALAR COM O ASSISTENTE
                       </Button>
