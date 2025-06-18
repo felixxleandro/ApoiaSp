@@ -15,25 +15,25 @@ export const Sobre = (): JSX.Element => {
     {
       id: 2,
       name: "Leandro Enrico Félix de Oliveira",
-      description: "Responsável pela criação de todo o design do site, bem como organização da metodologia ágil utilizada ao longo do projeto.\n\nAtualmente (2025), trabalha na ONG \"Escrevendo na Quebrada\" e tem aprofundado seus conhecimentos em nuvem, AWS e backend.",
+      description: "Responsável pelo desenvolvimento de fron-end e back-end, bem como ferramentas de IA utilizadas ao longo do projeto e formas de tornar o protótipo mais funcional.\n\nAtualmente (2025), trabalha na ONG \"Escrevendo na Quebrada\" e tem aprofundado seus conhecimentos em nuvem, AWS e backend.",
       image: "/leandro.jpeg"
     },
     {
       id: 3,
       name: "Gabriel Luis da Costa Alonso",
-      description: "Responsável pela criação de todo o design do site, bem como organização da metodologia ágil utilizada ao longo do projeto.\n\nAtualmente (2025), trabalha na ONG \"Escrevendo na Quebrada\" e tem aprofundado seus conhecimentos em nuvem, AWS e backend.",
+      description: "Responsável por desenhar a arquitetura serverless do projeto na nuvem AWS, garantindo a integração segura e escalável entre todos os serviços.\n\nAtualmente (2025), trabalha na ONG \"Escrevendo na Quebrada\" e tem aprofundado seus conhecimentos em nuvem, AWS e backend.",
       image: "/gabriel.jpeg"
     },
     {
       id: 4,
       name: "Henrique Romão Tardoni",
-      description: "Responsável pela criação de todo o design do site, bem como organização da metodologia ágil utilizada ao longo do projeto.\n\nAtualmente (2025), trabalha na ONG \"Escrevendo na Quebrada\" e tem aprofundado seus conhecimentos em nuvem, AWS e backend.",
+      description: "Responsável pelo desenvolvimento de front-end e back-end, bem como ideias ao decorrer do projeto.\n\nAtualmente (2025), trabalha na ONG \"Escrevendo na Quebrada\" e tem aprofundado seus conhecimentos em nuvem, AWS e backend.",
       image: "/henrique.jpeg"
     },
     {
       id: 5,
       name: "Danilton Mota Braga",
-      description: "Responsável pela criação de todo o design do site, bem como organização da metodologia ágil utilizada ao longo do projeto.\n\nAtualmente (2025), trabalha na ONG \"Escrevendo na Quebrada\" e tem aprofundado seus conhecimentos em nuvem, AWS e backend.",
+      description: "Responsável pelo desenvolvimento de front-end e back-end, bem como pesquisa para ferramentas de otimização e aperfeiçoamento do código.\n\nAtualmente (2025), trabalha na ONG \"Escrevendo na Quebrada\" e tem aprofundado seus conhecimentos em nuvem, AWS e backend.",
       image: "/danilton.jpeg"
     }
   ];
