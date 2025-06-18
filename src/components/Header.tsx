@@ -16,14 +16,11 @@ export const Header = ({ title, subtitle, titleColor = "default" }: HeaderProps)
         <h1 className="font-['Nunito',Helvetica] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[86px] tracking-[0] leading-normal">
           {titleColor === "mixed" ? (
             <>
-              <span className="text-[
-#fcfdeb]">APOIA</span>
-              <span className="text-[
-#c1a2a0]">SP</span>
+              <span className="text-[#fcfdeb]">APOIA</span>
+              <span className="text-[#c1a2a0]">SP</span>
             </>
           ) : (
-            <span className="text-[
-#fcfdeb]">{title}</span>
+            <span className="text-[#fcfdeb]">{title}</span>
           )}
         </h1>
         <p className="mt-4 sm:mt-6 md:mt-8 font-['Poppins',Helvetica] font-bold text-[
