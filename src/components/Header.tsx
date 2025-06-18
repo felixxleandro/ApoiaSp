@@ -14,7 +14,7 @@ export const Header = ({
   return (
     <header className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px] overflow-hidden">
       {/* Fundo sólido em vez de imagem */}
-      <div className="fixed inset-0 h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px] bg-[#322030] -z-10" />
+      <div className="fixed inset-0 h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px] bg-[#1654DF] -z-10" />
 
       <Navbar />
 
