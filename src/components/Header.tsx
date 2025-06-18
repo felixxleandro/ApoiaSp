@@ -24,7 +24,7 @@ export const Header = ({
           {titleColor === "mixed" ? (
             <>
               <span className="text-[#fcfdeb]">APOIA</span>
-              <span className="text-[#c1a2a0]">SP</span>
+              <span className="text-[#1654DF]">SP</span>
             </>
           ) : (
             <span className="text-[#fcfdeb]">{title}</span>
