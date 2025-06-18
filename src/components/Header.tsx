@@ -8,16 +8,18 @@ interface HeaderProps {
 
 export const Header = ({ title, subtitle, titleColor = "default" }: HeaderProps): JSX.Element => {
   return (
-    <header className="relative w-screen h-screen -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12 xl:-mx-16">
+    <header className="fixed top-0 left-0 w-screen h-screen z-0">
       {/* Background que ocupa toda a tela */}
-      <div className="absolute w-screen h-full top-0 left-0 bg-[url(/foto-painel.png)] bg-cover bg-center">
+      <div className="absolute inset-0 w-full h-full bg-[url(/foto-painel.png)] bg-cover bg-center">
         <div className="h-full bg-[#322030f2]" />
       </div>
       
-      <Navbar />
+      <div className="relative z-10">
+        <Navbar />
+      </div>
       
       {/* Hero Content */}
-      <div className="absolute w-full px-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
+      <div className="absolute w-full px-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20">
         <h1 className="font-['Nunito',Helvetica] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[86px] tracking-[0] leading-normal">
           {titleColor === "mixed" ? (
             <>
