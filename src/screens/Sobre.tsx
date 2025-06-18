@@ -1,6 +1,7 @@
-import Navbar from "../components/navbar";
 import { Card, CardContent } from "../components/ui/card";
 import { Separator } from "../components/ui/separator";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 export const Sobre = (): JSX.Element => {
   // Team members data
@@ -114,36 +115,15 @@ export const Sobre = (): JSX.Element => {
     { id: 5, title: "Painel de Administração" },
   ];
 
-  // Social media icons
-  const socialIcons = [
-    { id: 1, icon: "/logo-tiktok.svg", alt: "Logo tiktok" },
-    { id: 2, icon: "/logo-facebook.svg", alt: "Logo facebook" },
-    { id: 3, icon: "/logo-linkedin.svg", alt: "Logo linkedin" },
-    { id: 4, icon: "/logo-instagram.svg", alt: "Logo instagram" },
-  ];
-
   return (
     <div className="bg-[#fcfdeb] flex flex-row justify-center w-full">
       <div className="bg-[#fcfdeb] overflow-hidden w-full max-w-[1440px] relative">
         {/* Hero Section */}
-        <header className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px]">
-          <div className="w-full h-full bg-[url(/foto-painel.png)] bg-cover bg-center">
-            <div className="h-full bg-[#322030f2]" />
-          </div>
-
-          <Navbar />
-
-          {/* Hero Content */}
-          <div className="absolute w-full px-4 top-[200px] sm:top-[250px] md:top-[300px] lg:top-[358px] left-1/2 transform -translate-x-1/2 text-center z-10">
-            <h1 className="font-['Nunito',Helvetica] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[86px] tracking-[0] leading-normal">
-              <span className="text-[#fcfdeb]">APOIA</span>
-              <span className="text-[#c1a2a0]">SP</span>
-            </h1>
-            <p className="mt-4 sm:mt-6 md:mt-8 font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[25px] px-4">
-              Se interessou pelo projeto? Conheça mais sobre ele e seus criadores!
-            </p>
-          </div>
-        </header>
+        <Header 
+          title="APOIASP"
+          subtitle="Se interessou pelo projeto? Conheça mais sobre ele e seus criadores!"
+          titleColor="mixed"
+        />
 
         {/* Project Overview Section */}
         <section className="w-full max-w-[1200px] mx-auto py-8 md:py-12 px-4 md:px-8">
@@ -400,33 +380,7 @@ export const Sobre = (): JSX.Element => {
         </section>
 
         {/* Footer */}
-        <footer className="w-full mt-12 sm:mt-16">
-          <Separator className="w-full h-px bg-[#322030]" />
-
-          <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-32 py-6 sm:py-8 gap-4 sm:gap-6">
-            <div className="flex items-center">
-              <img className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[42px] lg:h-[43px]" alt="Logo" src="/logo.png" />
-              <div className="ml-3 font-['Poppins',Helvetica] font-bold text-[#322030] text-sm sm:text-base">
-                ApoiaSp
-              </div>
-            </div>
-
-            <div className="font-['Inter',Helvetica] font-medium text-[#322030] text-xs sm:text-sm md:text-base text-center">
-              © 2025 - Todos os direitos reservados a ApoiaSP.
-            </div>
-
-            <div className="flex space-x-4 sm:space-x-6">
-              {socialIcons.map((icon) => (
-                <img
-                  key={icon.id}
-                  className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-[15px] lg:h-[15px]"
-                  alt={icon.alt}
-                  src={icon.icon}
-                />
-              ))}
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

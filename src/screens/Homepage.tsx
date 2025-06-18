@@ -1,8 +1,8 @@
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
-import { Separator } from "../components/ui/separator";
 import { Link } from "react-router-dom";
-import Navbar from "../components/navbar";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 export const Homepage = (): JSX.Element => {
   // Technology cards data
@@ -44,38 +44,15 @@ export const Homepage = (): JSX.Element => {
     },
   ];
 
-  // Social media icons
-  const socialIcons = [
-    { id: 1, icon: "/logo-tiktok.svg", alt: "Logo tiktok" },
-    { id: 2, icon: "/logo-facebook.svg", alt: "Logo facebook" },
-    { id: 3, icon: "/logo-linkedin.svg", alt: "Logo linkedin" },
-    { id: 4, icon: "/logo-instagram.svg", alt: "Logo instagram" },
-  ];
-
   return (
     <div className="bg-[#fcfdeb] flex flex-row justify-center w-full">
       <div className="bg-[#fcfdeb] overflow-hidden w-full max-w-[1440px] relative">
         {/* Hero Section */}
-        <header className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[804px]">
-          <div className="absolute w-full h-full top-0 left-0 bg-[url(/foto-painel.png)] bg-cover bg-center">
-            <div className="h-full w-full bg-[#322030f2]" />
-          </div>
-
-          {/* Logo and Navigation */}
-          <Navbar />
-
-          {/* Hero Content */}
-          <div className="absolute w-full px-4 top-[200px] sm:top-[250px] md:top-[300px] lg:top-[358px] left-1/2 transform -translate-x-1/2 text-center z-10">
-            <h1 className="font-['Nunito',Helvetica] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[86px] tracking-[0] leading-normal">
-              <span className="text-[#fcfdeb]">APOIA</span>
-              <span className="text-[#c1a2a0]">SP</span>
-            </h1>
-            <p className="mt-4 sm:mt-6 md:mt-8 font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[25px] px-4">
-              Conectando pessoas aos seus direitos. Informação que transforma,
-              acesso que inclui.
-            </p>
-          </div>
-        </header>
+        <Header 
+          title="APOIASP"
+          subtitle="Conectando pessoas aos seus direitos. Informação que transforma, acesso que inclui."
+          titleColor="mixed"
+        />
 
         {/* Main Content */}
         <main className="px-4 sm:px-6 md:px-8 lg:px-[120px]">
@@ -166,7 +143,7 @@ export const Homepage = (): JSX.Element => {
                     <Link to="/chatbot" className="w-full sm:flex-1">
                       <Button
                         variant="outline"
-                        className="w-full h-10 sm:h-12 md:h-14 lg:h-16 rounded-[20px] sm:rounded-[30px] md:rounded-[40px] lg:rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-xs sm:text-sm md:text-base lg:text-[13px] bg-[#e3cebd] hover:bg-[#e3cebd]"
+                        className="w-full h-10 sm:h-12 md:h-14 lg:h-16 rounded-[20px] sm:rounded-[30px] md:rounded-[40px] lg:rounded-[50px] border-[#322030] font-['Poppins',Helvetica] font-bold text-[#322030] text-xs sm:text-sm md:text-base lg:text-[13px] bg-[#fcfdeb] hover:bg-[#e3cebd]"
                       >
                         QUERO FALAR COM O ASSISTENTE
                       </Button>
@@ -237,34 +214,7 @@ export const Homepage = (): JSX.Element => {
         </main>
 
         {/* Footer */}
-        <footer className="mt-12 sm:mt-16 md:mt-20 lg:mt-[100px]">
-          <Separator className="w-full h-px bg-[#322030]" />
-
-          <div className="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 md:px-8 lg:px-[120px] py-4 sm:py-6 md:py-8 lg:py-[33px] gap-4 sm:gap-6">
-            <div className="flex items-center">
-              <img className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-[41px] lg:h-[41px]" alt="Logo" src="/logo.png" />
-              <span className="ml-2 sm:ml-3 lg:ml-[11px] font-['Poppins',Helvetica] font-bold text-[#322030] text-sm sm:text-base">
-                ApoiaSp
-              </span>
-            </div>
-
-            <p className="font-['Inter',Helvetica] font-medium text-[#322030] text-xs sm:text-sm md:text-base text-center">
-              © 2025 - Todos os direitos reservados a ApoiaSP.
-            </p>
-
-            <div className="flex space-x-3 sm:space-x-4 md:space-x-6 lg:space-x-[24px]">
-              {socialIcons.map((icon) => (
-                <a key={icon.id} href="#" aria-label={icon.alt}>
-                  <img
-                    className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-[15px] lg:h-[15px]"
-                    alt={icon.alt}
-                    src={icon.icon}
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

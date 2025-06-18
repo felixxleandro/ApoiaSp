@@ -3,7 +3,8 @@ import { Send, Bot, User } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Card, CardContent } from "../components/ui/card";
-import Navbar from "../components/navbar";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 interface Message {
   id: string;
@@ -110,24 +111,10 @@ export const Chatbot = (): JSX.Element => {
     <div className="bg-[#fcfdeb] flex flex-row justify-center w-full min-h-screen">
       <div className="bg-[#fcfdeb] overflow-hidden w-full max-w-[1440px] relative">
         {/* Hero Section */}
-        <header className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]">
-          <div className="absolute w-full h-full top-0 left-0 bg-[url(/foto-painel.png)] bg-cover bg-[50%_50%]">
-            <div className="h-full bg-[#322030f2]" />
-          </div>
-
-          <Navbar />
-
-          {/* Hero Content */}
-          <div className="absolute w-full px-4 top-[120px] sm:top-[140px] md:top-[160px] lg:top-[180px] left-1/2 transform -translate-x-1/2 text-center z-10">
-            <h1 className="font-['Nunito',Helvetica] font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] tracking-[0] leading-normal">
-              <span className="text-[#fcfdeb]">ASSISTENTE </span>
-              <span className="text-[#c1a2a0]">VIRTUAL</span>
-            </h1>
-            <p className="mt-2 sm:mt-3 md:mt-4 font-['Poppins',Helvetica] font-bold text-[#fcfdeb] text-sm sm:text-base md:text-lg lg:text-xl">
-              Tire suas dúvidas sobre benefícios e direitos sociais
-            </p>
-          </div>
-        </header>
+        <Header 
+          title="ASSISTENTE VIRTUAL"
+          subtitle="Tire suas dúvidas sobre benefícios e direitos sociais"
+        />
 
         {/* Chat Container */}
         <main className="px-4 sm:px-6 md:px-8 lg:px-[120px] py-6 sm:py-8 md:py-[50px]">
@@ -263,27 +250,7 @@ export const Chatbot = (): JSX.Element => {
         </main>
 
         {/* Footer */}
-        <footer className="mt-8 sm:mt-12 md:mt-[50px] pt-6 sm:pt-8 md:pt-9 border-t border-[#322030]">
-          <div className="px-4 sm:px-6 md:px-8 lg:px-[120px] flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 pb-6 sm:pb-8">
-            <div className="flex items-center">
-              <img className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-[49px]" alt="Logo" src="/logo.png" />
-              <div className="ml-2 sm:ml-3 font-['Poppins',Helvetica] font-bold text-[#322030] text-sm sm:text-base">
-                ApoiaSp
-              </div>
-            </div>
-
-            <div className="font-['Inter',Helvetica] font-medium text-[#322030] text-xs sm:text-sm md:text-base text-center">
-              © 2025 - Todos os direitos reservados a ApoiaSP.
-            </div>
-
-            <div className="flex gap-3 sm:gap-4 md:gap-[12px]">
-              <img className="w-4 h-4 sm:w-5 sm:h-5" alt="Logo tiktok" src="/logo-tiktok.svg" />
-              <img className="w-4 h-4 sm:w-5 sm:h-5" alt="Logo facebook" src="/logo-facebook.svg" />
-              <img className="w-4 h-4 sm:w-5 sm:h-5" alt="Logo linkedin" src="/logo-linkedin.svg" />
-              <img className="w-4 h-4 sm:w-5 sm:h-5" alt="Logo instagram" src="/logo-instagram.svg" />
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
