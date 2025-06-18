@@ -10,7 +10,7 @@ const institutions = [
   {
     id: 1,
     name: "Escola da Nuvem",
-    image: "/foto-institui--o-1.png",
+    image: "/escola_da_nuvem_logo.jpeg",
     description:
       "A Escola da Nuvem, fundada em 2020 por empresários e profissionais de tecnologia, é uma organização sem fins lucrativos que oferece cursos online gratuitos na área de tecnologia em nuvem, com o objetivo de construir uma formação técnica de qualidade, de olho na empregabilidade. A iniciativa proporciona oportunidades reais de emprego. Centrada na solidariedade e na dignidade.",
   },
